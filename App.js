@@ -1,38 +1,19 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
-
+import Home from './src/Screens/Home';
 import React from 'react';
+import {
+  SafeAreaView
+} from 'react-native';
+import { styles } from './src/Styles/Styles_App';
 
 const App = () => {
+
   return (
-    <View style={styles.mainContainer}>
-      <View style={styles.textContainer}>
-        <Text style={styles.texto}>¡Hola, Coder!</Text>
-      </View>
-    </View>
+    <SafeAreaView style={styles.mainContainer}>
+
+      <Home />
+
+    </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  mainContainer: {
-    flex: 1,
-    /* borderColor: 'red',
-    borderWidth: 2 */
-  },
-
-  textContainer: {
-    flex: 1,
-    margin: 10,
-    justifyContent: 'center',
-    /* borderColor: 'blue',
-    borderWidth: 2, */
-  },
-  texto: {
-    textAlign: 'center',
-  }
-});
 
 export default App;
