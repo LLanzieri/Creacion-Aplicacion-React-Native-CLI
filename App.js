@@ -1,18 +1,20 @@
-import Home from './src/Screens/Home';
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ *
+ * @format
+ * @flow strict-local
+ */
+
+import AppNavigation from './src/StackNavigation/AppNavigation';
 import React from 'react';
-import {
-  SafeAreaView
-} from 'react-native';
-import { styles } from './src/Styles/Styles_App';
 
 const App = () => {
 
   return (
-    <SafeAreaView style={styles.mainContainer}>
 
-      <Home />
+    <AppNavigation />
 
-    </SafeAreaView>
   );
 };
 
