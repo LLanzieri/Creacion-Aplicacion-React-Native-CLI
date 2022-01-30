@@ -3,15 +3,12 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     mainContainer: {
         flex: 1,
-        backgroundColor: 'white',
+        padding: 10,
         //borderWidth: 2,
-        //borderColor: 'yellow'
-    },
-    containerElementos: {
-        flex: 1,
-        justifyContent: 'center',
-        //borderWidth: 2,
-        //borderColor: 'purple'
+        //borderColor: 'blue',
+        alignItems: 'center',
+        margin: 10,
+        justifyContent: 'center'
     },
     imagen: {
         flex: 1,
@@ -22,11 +19,9 @@ export const styles = StyleSheet.create({
         //borderColor: 'red',
         margin: 5
     },
-    lista: {
-        flex: 1,
-        //borderColor: 'green',
-        //borderWidth: 2,
-        margin: 5
+    texto: {
+        color: 'black',
+        fontSize: 20,
     }
 
 });

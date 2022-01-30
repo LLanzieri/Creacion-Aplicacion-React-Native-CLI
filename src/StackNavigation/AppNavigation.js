@@ -1,22 +1,51 @@
-import Detalle from '../Screens/Detalle';
-import ListaCategorias from '../Screens/ListaCategorias';
-import ListaProductos from '../Screens/ListaProductos';
+import Icon from 'react-native-vector-icons/Ionicons';
 import { NavigationContainer } from '@react-navigation/native';
 import React from "react";
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import TabCarrito from './Tabs/TabCarrito';
+import TabConfiguracion from './Tabs/TabConfiguracion';
+import TabShop from './Tabs/TabShop';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+//import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 // Necesario para inicializar el Stack
-const Stack = createNativeStackNavigator();
+//const Stack = createNativeStackNavigator();
+
+// Necesario para inicializar el Stack de pestañas
+const BottomTabs = createBottomTabNavigator();
 
 const AppNavigation = () => {
     return (
         <NavigationContainer>
-            <Stack.Navigator initialRouteName='ListaCategorias'>
-                <Stack.Screen name="ListaCategorias" component={ListaCategorias} options={{ title: 'Lista de categorías' }} />
-                <Stack.Screen name="ListaProductos" component={ListaProductos} options={{ title: 'Lista de productos' }} />
-                <Stack.Screen name="DetalleProducto" component={Detalle} options={{ title: 'Detalle del producto' }} />
-            </Stack.Navigator>
-        </NavigationContainer>
+            <BottomTabs.Navigator initialRouteName='Compra' screenOptions={{
+                headerShown: false
+            }}>
+
+                <BottomTabs.Screen name='Compra' component={TabShop}
+                    options={{
+                        tabBarIcon: ({ focused }) => (
+                            <Icon name='home' size={25} />
+                        )
+                    }}
+                />
+
+
+                <BottomTabs.Screen name='Carrito' component={TabCarrito}
+                    options={{
+                        tabBarIcon: ({ focused }) => (
+                            <Icon name='cart' size={25} />
+                        )
+                    }} />
+                <BottomTabs.Screen name='Configuracion' component={TabConfiguracion}
+                    options={{
+                        title: 'Configuración',
+                        tabBarIcon: ({ focused }) => (
+                            <Icon name='settings' size={25} />
+                        )
+                    }} />
+
+            </BottomTabs.Navigator>
+        </NavigationContainer >
     )
 }
 

@@ -7,20 +7,32 @@ export const styles = StyleSheet.create({
     },
     containerElementos: {
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'space-evenly',
         alignItems: 'center'
     },
     imagen: {
         flex: 1,
-        justifyContent: 'center'
+        flexGrow: 0.2,
+        justifyContent: 'center',
+        //borderWidth: 2,
+        //borderColor: 'blue',
     },
     containerTexto: {
         flex: 1,
-        justifyContent: 'center',
+        flexGrow: 0.5,
+        borderWidth: 2,
+        borderColor: 'purple',
+        alignItems: 'center',
+
     },
     texto: {
-        fontSize: 25,
-        color: 'black'
+        fontSize: 20,
+        color: 'black',
+        margin: 10,
+        fontStyle: 'italic'
     },
-  
+    boton: {
+        flex: 1
+    }
+
 });

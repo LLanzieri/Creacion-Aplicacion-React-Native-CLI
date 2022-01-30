@@ -8,11 +8,25 @@ export const styles = StyleSheet.create({
     containerElementos: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        /* alignItems: 'center', */
+        //borderColor: 'purple',
+        //borderWidth: 2
     },
     imagen: {
         flex: 1,
-        justifyContent: 'center'
+        flexGrow: 0.25,
+        justifyContent: 'center',
+        alignItems: 'center',
+        //borderWidth: 2,
+        //borderColor: 'red',
+        margin: 5
+    },
+    lista: {
+        flex: 1,
+        margin: 5,
+        //borderColor: 'green',
+        borderWidth: 2,
+
     },
     containerTexto: {
         flex: 1,
@@ -22,8 +36,5 @@ export const styles = StyleSheet.create({
         fontSize: 25,
         color: 'black'
     },
-    boton: {
-        flex: 1,
-        justifyContent: 'center'
-    }
+
 });
