@@ -4,7 +4,7 @@ import ListaProductos from '../../Screens/ListaProductos';
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-// Necesario para inicializar el Stack
+// Necesario para inicializar el Stack de navegación de pantallas
 const Stack = createNativeStackNavigator();
 
 const TabShop = () => {
@@ -20,6 +20,8 @@ const TabShop = () => {
             />
 
             <Stack.Screen name="ListaProductos" component={ListaProductos}
+
+                // Defino que va a utilizar la variable 'route' y que se envía por parámetro el TITLE bajo el identificador 'TITULO' , así como también el color del fondo de la cabecera bajo el identificador 'COLOR'
                 options={({ route }) => ({
                     title: route.params.titulo,
                     headerStyle: {

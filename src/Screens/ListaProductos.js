@@ -19,6 +19,7 @@ const ListaProductos = ({ navigation, route }) => {
     const handleOnSelectedProduct = (item) => {
         navigation.navigate('DetalleProducto',
             {
+                // Envío todo el ítem seleccionado para utilizar en la vista bajo el identificador 'OBJETOELEGIDO'
                 objetoElegido: item
             }
         )
@@ -40,6 +41,12 @@ const ListaProductos = ({ navigation, route }) => {
                         ({ item }) => (
                             <ItemProducto obj={item} handleOnSelectedProduct={handleOnSelectedProduct} />
                         )
+                    }
+                    ListEmptyComponent=
+                    {
+                        <View style={styles.listaVacia}>
+                            <Text style={styles.textoListaVacia}>¡ NO HAY PRODUCTOS QUE COINCIDAN CON ESTA CATEGORIA !</Text>
+                        </View>
                     }
                 />
 

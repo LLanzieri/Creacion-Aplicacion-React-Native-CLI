@@ -4,12 +4,10 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import React from "react";
 import { styles } from "../Styles/styles_ItemCarrito";
 
-const ItemCarrito = ({ obj, handleOnSelectedProduct }) => {
+const ItemCarrito = ({ obj, handlerDelete }) => {
 
     return (
-        <View
-            style={styles.mainContainer}
-            /* onPress={() => handleOnSelectedProduct(obj)} */>
+        <View style={styles.mainContainer}>
 
             <View style={styles.containerProducto}>
                 <View style={styles.titulo}>
@@ -21,7 +19,7 @@ const ItemCarrito = ({ obj, handleOnSelectedProduct }) => {
 
             </View>
 
-            <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => console.warn('Eliminar' + ' ' + obj.id)}>
+            <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => handlerDelete(obj.id)}>
                 <Icon name='trash' size={20} style={styles.btnBorrar}> BORRAR ITEM</Icon>
             </TouchableOpacity>
 

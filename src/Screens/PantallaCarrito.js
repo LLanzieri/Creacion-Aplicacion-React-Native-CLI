@@ -17,6 +17,14 @@ const PantallaCarrito = () => {
         setTotal(total);
     }
 
+    const handlerOnConfirm = () => {
+        console.warn("CONFIRMAR COMPRA");
+    }
+
+    const handlerDelete = (item) => {
+        console.warn('Eliminar' + ' ' + item.id)
+    }
+
     useEffect(() => {
         calcularTotal();
     }, [])
@@ -30,11 +38,11 @@ const PantallaCarrito = () => {
                 renderItem=
                 {
                     ({ item }) => (
-                        <ItemCarrito obj={item} />
+                        <ItemCarrito obj={item} handlerDelete={handlerDelete} />
                     )
                 }
             />
-            <TouchableOpacity style={styles.containerTotal} onPress={() => console.warn("CONFIRMAR COMPRA")}>
+            <TouchableOpacity style={styles.containerTotal} onPress={() => handlerOnConfirm()}>
                 <Text style={styles.textoTotal}>Confirmar compra: $ {total}</Text>
             </TouchableOpacity>
         </SafeAreaView>

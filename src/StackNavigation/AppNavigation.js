@@ -6,17 +6,13 @@ import TabConfiguracion from './Tabs/TabConfiguracion';
 import TabShop from './Tabs/TabShop';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-//import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
-// Necesario para inicializar el Stack
-//const Stack = createNativeStackNavigator();
-
 // Necesario para inicializar el Stack de pestañas
 const BottomTabs = createBottomTabNavigator();
 
 const AppNavigation = () => {
     return (
         <NavigationContainer>
+        
             <BottomTabs.Navigator initialRouteName='Compra' screenOptions={{
                 headerShown: false
             }}>
@@ -28,7 +24,6 @@ const AppNavigation = () => {
                         )
                     }}
                 />
-
 
                 <BottomTabs.Screen name='Carrito' component={TabCarrito}
                     options={{

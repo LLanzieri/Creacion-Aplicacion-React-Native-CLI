@@ -9,9 +9,11 @@ const ImgCategorias = require('../../assets/images/opciones.png');
 
 const ListaCategorias = ({ navigation }) => {
 
+    // Cuando se hace click en el elemento, navego a la pantalla 'ListaProductos'
     const handlerOnSelectedItem = (item) => {
         navigation.navigate('ListaProductos',
             {
+                // Le paso a la pantalla los parámetros que espera bajo los identificadores 'TITULO' y 'COLOR' y el item entero con el identificador 'OBJETO' para utilizarlo en la vista
                 objeto: item,
                 titulo: item.nombre,
                 color: item.color
@@ -40,15 +42,6 @@ const ListaCategorias = ({ navigation }) => {
                     }
                     keyExtractor={item => item.id}
                 />
-
-                {/*
-                <View style={styles.containerTexto}>
-                    <Text style={styles.texto}>Screen: Lista de categorías</Text>
-                </View>
-
-                <View style={styles.boton}>
-                    <Button title="IR A LISTA DE PRODUCTOS" onPress={() => navigation.navigate('ListaProductos')} />
-                </View> */}
 
             </View>
         </SafeAreaView >

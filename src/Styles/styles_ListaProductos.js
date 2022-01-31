@@ -36,5 +36,16 @@ export const styles = StyleSheet.create({
         fontSize: 25,
         color: 'black'
     },
+    listaVacia: {
+        margin: 10,
+        alignItems: 'center'
+    },
+    textoListaVacia: {
+        margin: 15,
+        fontSize: 25,
+        color: 'black',
+        alignItems: 'center',
+        padding: 10
+    }
 
 });

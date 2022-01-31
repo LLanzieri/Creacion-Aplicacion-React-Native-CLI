@@ -7,6 +7,7 @@ const ImgDetalle = require('../../assets/images/evaluacion.png');
 
 const Detalle = ({ navigation, route }) => {
 
+    // Agarro desde el 'ROUTE' envíado todo el ítem bajo el identificador 'OBJETOELEGIDO'
     const { objetoElegido } = route.params;
 
     return (
