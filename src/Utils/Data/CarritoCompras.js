@@ -17,5 +17,14 @@ export const CARRITOCOMPRAS = [
         precio: 1800,
         cantidad: 2
     },
+    {
+        id: '3',
+        categoria: '1',
+        nombre: 'Pan de Soya',
+        descripcion: 'Pan de soya de harina integral, con una capa de mantequilla, sal y pimienta.',
+        peso: '380gr',
+        precio: 1800,
+        cantidad: 2
+    },
 
 ]

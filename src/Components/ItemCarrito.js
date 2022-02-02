@@ -5,7 +5,7 @@ import React from "react";
 import { styles } from "../Styles/styles_ItemCarrito";
 
 const ItemCarrito = ({ obj, handlerDelete }) => {
-
+  
     return (
         <View style={styles.mainContainer}>
 
@@ -16,7 +16,7 @@ const ItemCarrito = ({ obj, handlerDelete }) => {
 
                 <Text style={[styles.texto, { fontStyle: 'italic' }]}>Precio por unidad: $ {obj.precio}</Text>
                 <Text style={[styles.texto, { fontStyle: 'italic' }]}>Cantidad elegida: {obj.cantidad}</Text>
-
+        
             </View>
 
             <TouchableOpacity style={{ alignItems: 'center' }} onPress={() => handlerDelete(obj.id)}>

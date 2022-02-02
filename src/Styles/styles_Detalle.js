@@ -23,6 +23,7 @@ export const styles = StyleSheet.create({
         borderWidth: 2,
         borderColor: 'purple',
         alignItems: 'center',
+        padding: 10
 
     },
     texto: {

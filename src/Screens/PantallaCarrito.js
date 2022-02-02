@@ -22,7 +22,7 @@ const PantallaCarrito = () => {
     }
 
     const handlerDelete = (item) => {
-        console.warn('Eliminar' + ' ' + item.id)
+        console.warn('Eliminar' + ' ' + item)
     }
 
     useEffect(() => {
@@ -30,7 +30,7 @@ const PantallaCarrito = () => {
     }, [])
 
     return (
-        <SafeAreaView>
+        <SafeAreaView style={styles.mainContainer}>
 
             <FlatList
                 style={styles.lista}
